@@ -14,7 +14,7 @@
 			loading = true;
 			const { error } = await data.supabase.auth.signInWithOtp({
 				email,
-				options: { emailRedirectTo: `${$page.url.origin}/auth/callback` }
+				options: { emailRedirectTo: `${$page.url.origin}/api/auth/callback` }
 			});
 			if (error) throw error;
 			alert('Check your email for the login link!');

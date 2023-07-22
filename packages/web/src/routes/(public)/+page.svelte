@@ -159,7 +159,7 @@
 			{#each faqs as f}
 				<div
 					on:click={() => (f.isOpen = !f.isOpen)}
-					on:keypress={() => (f.isOpen = !f.isOpen)}
+					on:keydown={() => (f.isOpen = !f.isOpen)}
 					class="py-4 border-b hover:cursor-pointer flex items-center justify-between text-left"
 				>
 					{f.question}
