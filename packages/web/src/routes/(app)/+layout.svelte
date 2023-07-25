@@ -12,7 +12,7 @@
 		if (error) {
 			console.log(error);
 		}
-		goto('/')
+		goto('/');
 	};
 </script>
 

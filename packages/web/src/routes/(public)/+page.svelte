@@ -2,6 +2,24 @@
 	import { slide } from 'svelte/transition';
 	const features = [
 		{
+			title: 'Automated accounting',
+			img: '/271-factory-worker.svg',
+			details: [
+				'Automated proccesses are less error-prone',
+				'E-liability accounting & statements generator',
+				'Immutability of transaction records through blockchain'
+			]
+		},
+		{
+			title: 'Transparent auditing',
+			img: '/58-teamwork.svg',
+			details: [
+				'Transactions are pulic to all members of the supply chain',
+				'E-liabilities provide a robust audit trail',
+				'Highest level of data integrity'
+			]
+		},
+		{
 			title: 'Systems integration',
 			img: '/104-human-resource.svg',
 			details: [
@@ -9,51 +27,33 @@
 				'Import existing product & supplier data',
 				'Custom carbon emissions factor database'
 			]
-		},
-		{
-			title: 'Component analytics',
-			img: '/271-factory-worker.svg',
-			details: [
-				'Product- & component-level emissions measurement',
-				'E-liability accounting & statements generator',
-				'Immutability of transaction records through blockchain'
-			]
-		},
-		{
-			title: 'Footprint optimization',
-			img: '/58-teamwork.svg',
-			details: [
-				'Simulate impact of product changes to their cost & carbon footprint',
-				'Collaborate with other departments',
-				'Smart recommendations for product improvements'
-			]
 		}
 	];
 
 	let faqs = [
 		{
 			isOpen: false,
-			question: 'How does your carbon accounting software work?',
+			question: 'What is grape?',
 			answer:
-				'Our software uses a range of data sources, including industry-specific emission factors and real-time production data, to calculate the carbon footprint of your products. Our proprietary carbon footprint optimizer then provides recommendations on how to reduce emissions and improve sustainability.'
+				'grape is a carbon accounting platform specifically designed for the palm oil industry. It uses the e-liability accounting approach to help companies measure and manage their carbon emissions in more detail.'
 		},
 		{
 			isOpen: false,
-			question: 'How is your software different from competitors in the market?',
+			question: 'How is grape different from competitors in the market?',
 			answer:
-				'Our software provides a higher level of granularity in measuring emissions than many of our competitors, enabling businesses to identify emission hotspots and opportunities for improvement with greater accuracy. We also offer a user-friendly interface and a carbon footprint optimizer that delivers tailored recommendations for reducing emissions.'
+				'Our software provides a higher level of granularity in measuring emissions than many of our competitors, enabling businesses to identify emission hotspots and opportunities for improvement with greater accuracy. We also offer a modern user interface that is accessible and easy to use.'
 		},
 		{
 			isOpen: false,
-			question: 'How can your software help my business reduce its carbon footprint?',
+			question: 'What features does grape have?',
 			answer:
-				"By measuring your product's carbon footprint and identifying emission hotspots, our software can help your business understand where to focus its efforts to reduce emissions. Our carbon footprint optimizer provides tailored recommendations for reducing emissions and improving sustainability, which can help you achieve cost savings, enhance your brand reputation, and stay ahead of your competition & regulatory requirements."
+				'grape offers a range of powerful features, including carbon accounting tools, emission tracking, and sustainability reporting. You can calculate your carbon footprint, analyze your supply chain, and generate detailed reports to showcase your sustainability efforts.'
 		},
 		{
 			isOpen: false,
-			question: 'How long does it take to implement your software?',
+			question: 'What does grape stand for?',
 			answer:
-				'Implementation times can vary depending on the size of your organization and the complexity of your production processes. However, our team is dedicated to ensuring a smooth and efficient implementation process, and we work closely with each client to ensure that the software is customized to their specific needs.'
+				'grape stands for Generalised Reporting and Accounting Platform for Palm oil E-liabilities'
 		}
 	];
 </script>
@@ -92,7 +92,7 @@
 
 	<div>
 		<h2 class="font-display font-semibold text-4xl sm:text-5xl text-center max-w-5xl mx-auto">
-			Why <span class="text-blue-700">beru</span>
+			Why use <span class="text-blue-700">grape</span> ?
 		</h2>
 		<div class="w-full flex flex-col md:flex-row justify-between gap-8 mt-6">
 			{#each features as f}
@@ -133,18 +133,14 @@
 		<div class="flex flex-col-reverse md:flex-row md:justify-between gap-4 md:gap-12 md:h-96">
 			<div class="max-w-3xl space-y-6">
 				<h2 class="font-display font-semibold text-4xl sm:text-5xl">
-					We help you decarbonize your supply chain, one product at a time
+					We help you decarbonize your supply chain, one site at a time
 				</h2>
 				<p class="text-lg">
 					Scope 3 is especially dificult to measure, yet alone manage. We help you setup accurate
-					measurements and provide you the tools to reduce your products' carbon footprints.
+					measurements and provide you the tools to reduce your produce's carbon footprints.
 				</p>
 			</div>
-			<img
-				src="/cargo.jpg"
-				alt="cargo ship"
-				class="h-64 md:h-full w-full rounded-lg object-cover"
-			/>
+			<img src="/palm.jpg" alt="palm fruit" class="h-64 md:h-full w-full rounded-lg object-cover" />
 		</div>
 	</div>
 

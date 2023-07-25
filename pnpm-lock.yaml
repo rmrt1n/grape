@@ -10,9 +10,15 @@ importers:
 
   packages/processor:
     dependencies:
+      node-fetch:
+        specifier: ^2.6.1
+        version: 2.6.12
       sawtooth-sdk:
         specifier: ^1.0.5
         version: 1.0.5
+      text-encoding:
+        specifier: ^0.7.0
+        version: 0.7.0
       zeromq:
         specifier: ^4.2.1
         version: 4.6.0
@@ -2819,6 +2825,11 @@ packages:
       readable-stream: 2.3.8
       to-buffer: 1.1.1
       xtend: 4.0.2
+    dev: false
+
+  /text-encoding@0.7.0:
+    resolution: {integrity: sha512-oJQ3f1hrOnbRLOcwKz0Liq2IcrvDeZRHXhd9RgLrsT+DjWY/nty1Hi7v3dtkaEYbPYe0mUoOfzRrMwfXXwgPUA==}
+    deprecated: no longer maintained
     dev: false
 
   /text-table@0.2.0:
