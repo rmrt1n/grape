@@ -23,6 +23,6 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
 
 WORKDIR /project/grape
 
-CMD npm install && npm run dev
+CMD npm install && npm start
 
 EXPOSE 4004/tcp

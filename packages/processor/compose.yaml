@@ -1,7 +1,6 @@
 version: "2.1"
 
 services:
-
   settings-tp:
     image: hyperledger/sawtooth-settings-tp:chime
     container_name: sawtooth-settings-tp-default
@@ -30,7 +29,7 @@ services:
     depends_on:
       - validator
     volumes:
-      - '.:/project/grape:z'
+      - ".:/project/grape:z"
 
   validator:
     image: hyperledger/sawtooth-validator:chime
@@ -41,21 +40,21 @@ services:
       - "4004:4004"
     # start the validator with an empty genesis batch
     entrypoint: "bash -c \"\
-        sawadm keygen && \
-        sawtooth keygen my_key && \
-        sawset genesis -k /root/.sawtooth/keys/my_key.priv && \
-        sawset proposal create \
-          -k /root/.sawtooth/keys/my_key.priv \
-          sawtooth.consensus.algorithm.name=Devmode \
-          sawtooth.consensus.algorithm.version=0.1 \
-          -o config.batch && \
-        sawadm genesis config-genesis.batch config.batch && \
-        sawtooth-validator -vv \
-          --endpoint tcp://validator:8800 \
-          --bind component:tcp://eth0:4004 \
-          --bind network:tcp://eth0:8800 \
-          --bind consensus:tcp://eth0:5050 \
-        \""
+      sawadm keygen && \
+      sawtooth keygen my_key && \
+      sawset genesis -k /root/.sawtooth/keys/my_key.priv && \
+      sawset proposal create \
+      -k /root/.sawtooth/keys/my_key.priv \
+      sawtooth.consensus.algorithm.name=Devmode \
+      sawtooth.consensus.algorithm.version=0.1 \
+      -o config.batch && \
+      sawadm genesis config-genesis.batch config.batch && \
+      sawtooth-validator -vv \
+      --endpoint tcp://validator:8800 \
+      --bind component:tcp://eth0:4004 \
+      --bind network:tcp://eth0:8800 \
+      --bind consensus:tcp://eth0:5050 \
+      \""
 
   devmode-engine:
     image: hyperledger/sawtooth-devmode-engine-rust:chime
@@ -79,6 +78,6 @@ services:
     depends_on:
       - rest-api
     entrypoint: "bash -c \"\
-        sawtooth keygen && \
-        tail -f /dev/null \
-        \""
+      sawtooth keygen && \
+      tail -f /dev/null \
+      \""

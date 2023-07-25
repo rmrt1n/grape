@@ -10,18 +10,27 @@ importers:
 
   packages/processor:
     dependencies:
+      crypto:
+        specifier: ^1.0.1
+        version: 1.0.1
       node-fetch:
         specifier: ^2.6.1
         version: 2.6.12
+      protobufjs:
+        specifier: ^6.7.3
+        version: 6.11.3
       sawtooth-sdk:
-        specifier: ^1.0.5
-        version: 1.0.5
+        specifier: ^1.1.1
+        version: 1.1.1
+      secp256k1:
+        specifier: ^3.2.5
+        version: 3.8.0
+      text-encoder:
+        specifier: 0.0.4
+        version: 0.0.4
       text-encoding:
         specifier: ^0.7.0
         version: 0.7.0
-      zeromq:
-        specifier: ^4.2.1
-        version: 4.6.0
 
   packages/web:
     dependencies:
@@ -37,6 +46,9 @@ importers:
       '@tanstack/svelte-table':
         specifier: ^8.9.4
         version: 8.9.4(svelte@4.0.5)
+      sawtooth-sdk-js:
+        specifier: ^1.2.0
+        version: 1.2.0
       svelvet:
         specifier: ^8.0.8
         version: 8.0.8(svelte@4.0.5)
@@ -635,10 +647,6 @@ packages:
     resolution: {integrity: sha512-MqTGEo5bj5t157U6fA/BiDynNkn0YknVdh48CMPkTSpFTVmvao5UQmm7uEF6xBEo7qIMAlY/JSleYaE6VOdpaA==}
     dev: false
 
-  /@types/node@20.3.3:
-    resolution: {integrity: sha512-wheIYdr4NYML61AjC8MKj/2jrR/kDQri/CIpVoZwldwhnIrD/j9jIU5bJ8yBKuB2VhpFV7Ab6G2XkBjv9r9Zzw==}
-    dev: false
-
   /@types/node@20.4.2:
     resolution: {integrity: sha512-Dd0BYtWgnWJKwO1jkmTrzofjK2QXXcai0dmtzvIBhcA+RsG5h8R3xlyta0kGOZRNfL9GuRtb1knmPEhQrePCEw==}
 
@@ -1066,6 +1074,11 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /crypto@1.0.1:
+    resolution: {integrity: sha512-VxBKmeNcqQdiUQUW2Tzq0t377b54N2bMtXO/qiLa+6eRRmmC4qT3D4OnTGoT/U6O9aklQ/jTwbOtRMTTY8G0Ig==}
+    deprecated: This package is no longer supported. It's now a built-in Node module. If you've depended on crypto, you should switch to the one that's built-in.
+    dev: false
 
   /css-tree@2.3.1:
     resolution: {integrity: sha512-6Fv1DV/TYw//QF5IzQdqsNDjx/wc8TrMBZsqjL9eW01tWb7R7k/mq+/VXfJCl7SoD5emsJop9cOByJZfs8hYIw==}
@@ -2290,7 +2303,7 @@ packages:
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
       '@types/long': 4.0.2
-      '@types/node': 20.3.3
+      '@types/node': 20.4.2
       long: 4.0.0
     dev: false
 
@@ -2445,8 +2458,17 @@ packages:
       rimraf: 2.7.1
     dev: true
 
-  /sawtooth-sdk@1.0.5:
-    resolution: {integrity: sha512-SDsWuHTDYS5YwzXJ/yCDB9vE/imbTSIc1xvc/Wf2QmIBSFilFkPhNdTOnjAsiI14gt2Ygk4oW7MqJqHrOhdYbw==}
+  /sawtooth-sdk-js@1.2.0:
+    resolution: {integrity: sha512-Iyg2aKdfHT7XdKjQ+GQzNB6E607oYd6fE39fS/wssOfT5IM2hKREvBdMrf81oQLVuYxo1oRDTW5YY6zKJ5UDwg==}
+    dependencies:
+      protobufjs: 6.11.3
+      secp256k1: 3.8.0
+      uuid: 3.4.0
+      zeromq: 5.3.1
+    dev: false
+
+  /sawtooth-sdk@1.1.1:
+    resolution: {integrity: sha512-w3/CrrFfbq/Ruvxde9UFUS7k/GyhVZN58UdkdJBtfARP/NpDaX+P+PVD+fjgmkRyKIUgVRPu1/rdltYSn4x9bA==}
     dependencies:
       protobufjs: 6.11.3
       secp256k1: 3.8.0
@@ -2825,6 +2847,10 @@ packages:
       readable-stream: 2.3.8
       to-buffer: 1.1.1
       xtend: 4.0.2
+    dev: false
+
+  /text-encoder@0.0.4:
+    resolution: {integrity: sha512-12gllbNnC0Zdh9r+LCpEwpUdvncaE9hfUmCVm2ryCH1LEVUZbS6NdRq8omEgJI0zKgaGFTjwQVHbglGDCIbmNA==}
     dev: false
 
   /text-encoding@0.7.0:
@@ -3263,4 +3289,13 @@ packages:
     dependencies:
       nan: 2.17.0
       prebuild-install: 2.5.3
+    dev: false
+
+  /zeromq@5.3.1:
+    resolution: {integrity: sha512-4WDF9bNWWXe8OAI319bVw5dmG4BklEk8wzFGwRQxEzKb+0mgDU5J/jtyZPo0BEusVIU1+3mRQIEdT5LtQn+aAw==}
+    engines: {node: '>=6.0'}
+    requiresBuild: true
+    dependencies:
+      nan: 2.17.0
+      node-gyp-build: 4.6.0
     dev: false
