@@ -36,6 +36,7 @@
 		"@supabase/supabase-js": "^2.26.0",
 		"@tanstack/match-sorter-utils": "^8.8.4",
 		"@tanstack/svelte-table": "^8.9.4",
+		"sawtooth-sdk-js": "^1.2.0",
 		"svelvet": "^8.0.8"
 	}
 }
