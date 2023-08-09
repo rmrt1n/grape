@@ -108,8 +108,10 @@ export const actions = {
 
     // push data to sawtooth
     // disable until for demo in case it breaks
-    // const res = await fetch(`/api/push-sawtooth?id=${eliability.eliability_id}`);
-    // console.log(res);
+    const res = await fetch(`/api/push-sawtooth?id=${eliability.eliability_id}`, {
+      method: 'POST'
+    });
+    console.log(res);
 
     return { success: true };
   }
